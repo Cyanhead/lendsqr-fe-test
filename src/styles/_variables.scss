@@ -1,0 +1,30 @@
+// Font settings
+$font: (
+  family: 'Work Sans Variable',
+  family-alt: 'Avenir Next',
+  base-size: 16px,
+  line-height: 1.5,
+);
+
+// Colors
+$colors: (
+  primary: #213f7d,
+  secondary: #39cdcc,
+  background: #ffffff,
+  text: #545f7d,
+);
+
+// Breakpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+// Transition
+$transitions: (
+  short: all 300ms ease-in-out,
+  long: all 500ms ease-in-out,
+);
