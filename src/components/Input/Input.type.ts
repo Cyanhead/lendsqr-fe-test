@@ -1,1 +1,3 @@
-export type InputPropsType = React.InputHTMLAttributes<HTMLInputElement> & { classes?: string };
+import { CleanedInputPropsType } from '../../toolkit/react';
+
+export type InputPropsType = CleanedInputPropsType & { classes?: string };
