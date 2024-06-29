@@ -18,15 +18,15 @@ const Login = () => {
   }, [navigate, userEmail]);
 
   return (
-    <Layout.FlexRow style={styles.wrap}>
-      <Layout.FlexColumn justifyContent="center" style={styles.left}>
-        <Layout.FlexRow justifyContent="flex-start" style={styles.nav}>
+    <Layout.FlexRow classes={styles.wrap}>
+      <Layout.FlexColumn justifyContent="center" classes={styles.left}>
+        <Layout.FlexRow justifyContent="flex-start" classes={styles.nav}>
           <Logo />
         </Layout.FlexRow>
         <img src={loginImg} alt="illustration" />
       </Layout.FlexColumn>
       <Layout.FlexColumn
-        style={styles.right}
+        classes={styles.right}
         justifyContent="center"
         hasBoxShadow
       >
