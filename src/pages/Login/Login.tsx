@@ -1,10 +1,11 @@
 // import { LoginPropsType } from './Login.type';
-import { Layout, LoginForm, Logo } from '../../components';
+import { LoginForm, Logo } from '../../components';
 import styles from './Login.module.scss';
 import loginImg from '../../assets/login_illustration.svg';
 import { useAuth } from '../../auth/AuthContext';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Layout } from '../../uikit';
 
 const Login = () => {
   const { userEmail } = useAuth();
