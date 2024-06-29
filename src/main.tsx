@@ -4,6 +4,7 @@ import App from './App.tsx';
 import './styles/global.scss';
 import '@fontsource-variable/work-sans';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Login } from './pages/index.ts';
 import { AuthProvider } from './auth/AuthContext.tsx';
 import { ProtectedRoute } from './components/index.ts';
 
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/login',
-    element: <div>Login page</div>,
+    element: <Login />,
   },
 ]);
 
