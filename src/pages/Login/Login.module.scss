@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  height: 100vh;
+  flex-direction: column;
+  // justify-content: flex-end;
+
+  .sections {
+    padding: 16px;
+
+    @include respond-to(xs) {
+      // 480px
+      padding: 20px;
+    }
+
+    @include respond-to(sm) {
+      // 576px
+      padding: 24px;
+    }
+
+    @include respond-to(md) {
+      // 768px
+      padding: 40px;
+    }
+
+    @include respond-to(lg) {
+      // 992px
+      padding: 100px;
+    }
+  }
+
+  .left {
+    @extend .sections;
+
+    @include respond-to(lg) {
+      // 768px
+      padding: 40px;
+    }
+
+    @include respond-to(xl) {
+      // 768px
+      padding: 67px;
+    }
+  }
+
+  .right {
+    @extend .sections;
+  }
+
+  .nav {
+    align-items: flex-start;
+    margin-bottom: 32px;
+    width: auto;
+
+    @include respond-to(lg) {
+      // 992px
+      position: absolute;
+      top: 0;
+      margin-left: 97px;
+      margin-top: 106px;
+    }
+  }
+
+  @include respond-to(md) {
+    // 768px
+    flex-direction: unset;
+  }
+}
