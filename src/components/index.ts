@@ -1,5 +1,9 @@
 export { default as Button } from './Button';
 export { default as Input } from './Input';
+export { default as Link } from './Link';
 export { default as LoginForm } from './LoginForm';
 export { default as Logo } from './Logo';
+export { default as Menu } from './Menu';
+export { default as NavBar } from './NavBar';
 export { default as ProtectedRoute } from './ProtectedRoute';
+export { default as SearchBar } from './SearchBar';
