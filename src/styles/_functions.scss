@@ -13,3 +13,7 @@
 @function transition($key) {
   @return map-get($transitions, $key);
 }
+
+@function border-color($key) {
+  @return map-get($border-colors, $key);
+}

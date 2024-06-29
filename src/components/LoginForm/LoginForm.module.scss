@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: font(family-alt);
+
+  h1 {
+    color: color(primary);
+    font-size: calc(40 / 16 * 1rem);
+    margin-bottom: -14px;
+  }
+
+  p {
+    font-size: calc(12 / 16 * 1rem);
+  }
+
+  button.forgotPass {
+    color: color(secondary);
+    font-weight: 600;
+    margin-bottom: calc(6 / 16 * 1rem);
+
+    border: none;
+    padding: 0;
+    background-color: inherit;
+    text-align: left;
+    justify-self: flex-start;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  button.loginButton {
+    padding: 15px 16px 13px 16px;
+    line-height: 20px;
+  }
+
+  .loginInput {
+    border: 2px solid border-color(hard);
+    padding: 17.5px 16px 12.5px 16px;
+  }
+}

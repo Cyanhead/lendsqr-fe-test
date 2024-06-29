@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.boxShadow {
+  box-shadow: 3px 5px 20px 0px #0000000a;
+}
+
+.base {
+  align-items: var(--align-items, stretch);
+  gap: var(--gap, 0);
+  width: var(--width, 100%);
+  justify-items: var(--justify-items, start);
+}
+
+.flexRow {
+  @extend .base;
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--justify-content, flex-start);
+  flex-wrap: var(--flex-wrap, nowrap);
+
+  @include respond-to(lg) {
+    // 768px
+    flex-direction: row;
+  }
+}
+
+.flexColumn {
+  @extend .base;
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--justify-content, flex-start);
+}
+
+.gridRow {
+  @extend .base;
+  display: grid;
+
+  grid-template-columns: var(--small-screen-template-columns, none);
+
+  @include respond-to(sm) {
+    // 576px
+    grid-template-columns: var(--template-columns, none);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
