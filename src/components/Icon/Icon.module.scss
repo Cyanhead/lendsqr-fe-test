@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  width: var(--width, 16px);
+}
+
+.icon {
+  width: 100%;
+}
