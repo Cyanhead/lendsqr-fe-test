@@ -1,1 +1,3 @@
-export type NavBarPropsType = {};
+export type NavBarPropsType = {
+  toggleSideBar: () => void;
+};

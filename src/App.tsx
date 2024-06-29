@@ -1,10 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import { NavBar } from './components';
+import { useState } from 'react';
 
 function App() {
+  const [showSideBar, setShowSideBar] = useState(false);
+
+  function toggleSideBar() {
+    setShowSideBar(!showSideBar);
+  }
+
   return (
     <>
-      <NavBar />
+      <NavBar toggleSideBar={toggleSideBar} />
 
       <Outlet />
     </>

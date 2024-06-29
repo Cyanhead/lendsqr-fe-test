@@ -7,14 +7,24 @@ import avatar from '../../assets/avatar.png';
 import { useAuth } from '../../auth/AuthContext';
 import Menu from '../Menu';
 import { truncateString } from '../../helper';
+import { NavBarPropsType } from './NavBar.type';
 
-const NavBar = () => {
+const NavBar = ({ toggleSideBar }: NavBarPropsType) => {
   const { userEmail, logout } = useAuth();
   const shortenedUserName = userEmail && truncateString(userEmail);
 
   return (
     <header>
       <Layout.FlexRow classes={styles.wrap} hasBoxShadow gap="12px">
+        <button type="button" className={styles.mobileMenu}>
+          <Icon
+            src={Icons.Menu}
+            alt="menu icon"
+            width="100%"
+            onClick={toggleSideBar}
+          />
+        </button>
+
         <Logo size="small" />
 
         <SearchBar />

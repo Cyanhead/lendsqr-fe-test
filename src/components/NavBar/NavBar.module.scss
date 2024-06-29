@@ -2,6 +2,10 @@
 @import '../../styles/functions';
 @import '../../styles/mixins';
 
+header {
+  position: sticky;
+  top: 0;
+}
 .group {
   flex-direction: row;
   align-items: center;
@@ -10,28 +14,14 @@
 .wrap {
   @extend .group;
   justify-content: space-between;
-  // border: 1px solid red; // DELETE ME
   padding: 8px 16px;
 
-  @include respond-to(xs) {
-    // 480px
-  }
-
-  @include respond-to(sm) {
-    // 576px
-  }
+  background-color: color(background);
+  z-index: 10;
 
   @include respond-to(md) {
     // 768px
     padding: 26px 30px;
-  }
-
-  @include respond-to(lg) {
-    // 992px
-  }
-
-  @include respond-to(xl) {
-    // 1200px
   }
 
   .desktopOnly {
@@ -39,6 +29,24 @@
 
     @include respond-to(md) {
       display: block;
+    }
+  }
+
+  .mobileMenu {
+    border: none;
+    padding: 0;
+    background-color: inherit;
+
+    width: 20px;
+
+    cursor: pointer;
+
+    @include respond-to(xs) {
+      width: 24px;
+    }
+
+    @include respond-to(md) {
+      display: none;
     }
   }
 
@@ -62,7 +70,6 @@
 
   .user {
     @extend .group;
-    // border: 1px solid black; // DELETE ME
     width: unset;
 
     @include respond-to(sm) {
@@ -70,7 +77,3 @@
     }
   }
 }
-
-// .navBar {
-//   border: 1px solid black; // DELETE ME
-// }
