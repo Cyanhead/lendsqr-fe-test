@@ -5,6 +5,7 @@ export { default as LoginForm } from './LoginForm';
 export { default as Logo } from './Logo';
 export { default as Menu } from './Menu';
 export { default as NavBar } from './NavBar';
+export { default as PageTemplate } from './PageTemplate';
 export { default as ProtectedRoute } from './ProtectedRoute';
 export { default as SearchBar } from './SearchBar';
 export { default as SideBar } from './SideBar';

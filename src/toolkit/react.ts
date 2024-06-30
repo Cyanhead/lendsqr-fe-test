@@ -12,7 +12,7 @@ export type HTMLNodePropsType<T extends HTMLElement> = React.DetailedHTMLProps<
 
 export type CleanedHTMLNodePropsType<T extends HTMLElement> = Omit<
   HTMLNodePropsType<T>,
-  'ref' | 'className' | 'align'
+  'ref' | 'align'
 >;
 
 // Export types for various HTML elements

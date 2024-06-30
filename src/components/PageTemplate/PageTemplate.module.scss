@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  background-color: #fbfbfb;
+
+  padding: 40px 12px;
+  gap: 32px;
+
+  @include respond-to(sm) {
+    // 576px
+    padding: 40px 24px;
+    gap: 32px;
+  }
+
+  @include respond-to(md) {
+    // 768px
+    padding: 40px 28px;
+    gap: 32px;
+  }
+
+  @include respond-to(lg) {
+    // 992px
+    padding: 60px;
+    gap: 40px;
+  }
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  gap: 13px;
+
+  width: 100%;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  color: color(primary);
+  font-family: font(family);
+  font-size: calc(24 / 16 * 1rem);
+  font-weight: 500;
+}
