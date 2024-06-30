@@ -9,12 +9,19 @@
 
   flex-direction: column;
 
-  position: absolute;
+  position: fixed;
   transition: transition(long);
+
+  height: calc(100vh - 64px);
+  height: calc(100dvh - 64px);
+
+  overflow-y: auto;
 
   @include respond-to(md) {
     // 768px
     position: static;
+
+    height: unset;
   }
 }
 
@@ -30,4 +37,12 @@
 
 .spacer {
   margin: 20px 0 10px 0;
+}
+
+.mobileOnly {
+  margin: 20px 0 40px 0;
+  padding: 8px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: calc(12 / 16 * 1rem);
 }

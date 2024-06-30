@@ -3,6 +3,7 @@ import SideBarButton from '../SideBarButton';
 import styles from './SideBar.module.scss';
 import { SideBarPropsType } from './SideBar.type';
 import SideBarSection from '../SideBarSection';
+import Link from '../Link';
 
 const SideBar = ({ showSideBar, sideBarRef }: SideBarPropsType) => {
   const sections = [
@@ -62,6 +63,12 @@ const SideBar = ({ showSideBar, sideBarRef }: SideBarPropsType) => {
       {sections.map(({ title, options }, index) => (
         <SideBarSection key={index} title={title} options={options} />
       ))}
+
+      <nav className={styles.mobileOnly}>
+        <Link to="docs" isExternal>
+          Docs
+        </Link>
+      </nav>
     </Layout.FlexRow>
   );
 };
