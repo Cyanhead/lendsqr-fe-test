@@ -1,28 +1,16 @@
-import { useEffect, useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { MenuPropsType } from './Menu.type';
 import styles from './Menu.module.scss';
+import { useClickOutside } from '../../hooks';
 
 const Menu = ({ children, options }: MenuPropsType) => {
   const [showMenu, setShowMenu] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
-  // wartch for clicks outside of the menu and close the menu if clicked
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setShowMenu(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  const menuButtonRef = useRef<HTMLDivElement>(null);
+  useClickOutside([menuButtonRef], () => setShowMenu(false));
 
   return (
-    <div ref={menuRef} className={styles.wrap}>
+    <div ref={menuButtonRef} className={styles.wrap}>
       <button
         onClick={() => setShowMenu(!showMenu)}
         type="button"
