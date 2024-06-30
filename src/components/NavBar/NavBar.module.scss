@@ -5,6 +5,8 @@
 header {
   position: sticky;
   top: 0;
+  background-color: color(background);
+  z-index: 10;
 }
 .group {
   flex-direction: row;
@@ -15,9 +17,6 @@ header {
   @extend .group;
   justify-content: space-between;
   padding: 8px 16px;
-
-  background-color: color(background);
-  z-index: 10;
 
   @include respond-to(md) {
     // 768px

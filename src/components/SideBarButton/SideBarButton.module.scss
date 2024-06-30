@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  background-color: color(background);
+  color: color(text);
+  border: none;
+  padding: 8px 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  text-transform: capitalize;
+  opacity: 60%;
+
+  &:hover {
+    background-color: rgba(57, 205, 204, 0.06);
+  }
+}
+
+.active {
+  @extend .wrap;
+
+  border-left: 3px solid color(secondary);
+  background-color: rgba(57, 205, 204, 0.06);
+  opacity: 100%;
+}

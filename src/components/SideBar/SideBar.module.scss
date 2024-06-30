@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  min-width: 283px;
+  width: 283px;
+  background-color: color(background);
+
+  flex-direction: column;
+
+  position: absolute;
+  transition: transition(long);
+
+  @include respond-to(md) {
+    // 768px
+    position: static;
+  }
+}
+
+.hidden {
+  @extend .wrap;
+  left: -100%;
+}
+
+.visible {
+  @extend .wrap;
+  left: 0;
+}
+
+.spacer {
+  margin: 20px 0 10px 0;
+}

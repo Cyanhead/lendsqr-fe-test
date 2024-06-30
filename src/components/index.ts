@@ -7,3 +7,6 @@ export { default as Menu } from './Menu';
 export { default as NavBar } from './NavBar';
 export { default as ProtectedRoute } from './ProtectedRoute';
 export { default as SearchBar } from './SearchBar';
+export { default as SideBar } from './SideBar';
+export { default as SideBarButton } from './SideBarButton';
+export { default as SideBarSection } from './SideBarSection';

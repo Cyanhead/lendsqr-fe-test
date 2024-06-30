@@ -22,7 +22,7 @@ const renderWithRouterAndAuth = (
 describe('NavBar', () => {
   it('should render', () => {
     // Arrange
-    renderWithRouterAndAuth(<NavBar />);
+    renderWithRouterAndAuth(<NavBar toggleSideBar={() => {}} />);
 
     // Act
     const navBarElem = screen.getByRole('banner');

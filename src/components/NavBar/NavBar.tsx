@@ -9,14 +9,14 @@ import Menu from '../Menu';
 import { truncateString } from '../../helper';
 import { NavBarPropsType } from './NavBar.type';
 
-const NavBar = ({ toggleSideBar }: NavBarPropsType) => {
+const NavBar = ({ toggleSideBar, menuButtonRef }: NavBarPropsType) => {
   const { userEmail, logout } = useAuth();
   const shortenedUserName = userEmail && truncateString(userEmail);
 
   return (
     <header>
       <Layout.FlexRow classes={styles.wrap} hasBoxShadow gap="12px">
-        <button type="button" className={styles.mobileMenu}>
+        <button type="button" className={styles.mobileMenu} ref={menuButtonRef}>
           <Icon
             src={Icons.Menu}
             alt="menu icon"
@@ -39,6 +39,7 @@ const NavBar = ({ toggleSideBar }: NavBarPropsType) => {
           <Icon src={Icons.Bell} alt="bell icon" width={22} />
 
           <Menu
+            // ref={menuButtonRef}
             options={[
               {
                 type: 'text',
