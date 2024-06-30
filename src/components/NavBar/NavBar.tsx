@@ -16,13 +16,13 @@ const NavBar = ({ toggleSideBar, menuButtonRef }: NavBarPropsType) => {
   return (
     <header>
       <Layout.FlexRow classes={styles.wrap} hasBoxShadow gap="12px">
-        <button type="button" className={styles.mobileMenu} ref={menuButtonRef}>
-          <Icon
-            src={Icons.Menu}
-            alt="menu icon"
-            width="100%"
-            onClick={toggleSideBar}
-          />
+        <button
+          type="button"
+          className={styles.mobileMenuBtn}
+          ref={menuButtonRef}
+          onClick={toggleSideBar}
+        >
+          <Icon src={Icons.Menu} alt="menu icon" />
         </button>
 
         <Logo size="small" />

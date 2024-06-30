@@ -31,17 +31,24 @@ header {
     }
   }
 
-  .mobileMenu {
+  .mobileMenuBtn {
     border: none;
-    padding: 0;
+    padding: 4px;
     background-color: inherit;
-
-    width: 20px;
 
     cursor: pointer;
 
-    @include respond-to(xs) {
-      width: 24px;
+    div,
+    img {
+      width: 20px;
+
+      @include respond-to(xs) {
+        width: 24px;
+      }
+    }
+
+    @include respond-to(sm) {
+      padding: 8px;
     }
 
     @include respond-to(md) {
