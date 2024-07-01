@@ -11,3 +11,5 @@ export { default as SearchBar } from './SearchBar';
 export { default as SideBar } from './SideBar';
 export { default as SideBarButton } from './SideBarButton';
 export { default as SideBarSection } from './SideBarSection';
+export { default as StatusLabel } from './StatusLabel';
+export { default as UserList } from './UserList';

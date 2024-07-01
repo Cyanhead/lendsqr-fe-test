@@ -2,9 +2,14 @@
 @import '../../styles/functions';
 @import '../../styles/mixins';
 
-.wrap {
+.positionRelative {
   display: flex;
   position: relative;
+}
+
+.wrap {
+  display: flex;
+  // z-index: 10;
 }
 
 .cleanButton {
@@ -28,15 +33,41 @@
 
 .menuList {
   position: absolute;
-  top: 100%;
-  z-index: 2;
-  right: 0;
+  z-index: 5;
   width: max-content;
-  border-radius: 0.5rem;
+  border-radius: 4px;
   background-color: white;
   padding: 0;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
 }
+
+.top {
+  right: 0;
+  bottom: 100%;
+}
+
+.bottom {
+  right: 0;
+  top: 100%;
+}
+
+.left {
+  top: 0;
+  right: 80%;
+}
+
+.right {
+  top: 0;
+  left: 100%;
+}
+
+// .left {
+//   right: 0;
+// }
+
+// .right {
+//   left: 0;
+// }
 
 .menuOption {
   list-style: none;

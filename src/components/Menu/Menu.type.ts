@@ -7,5 +7,6 @@ export type MenuPropsType = {
     type?: 'text' | 'button';
     onClick: () => void;
   }[];
-  positions?: string;
+  anchor?: 'top' | 'bottom' | 'left' | 'right';
+  willUseParentPosition?: boolean;
 };
