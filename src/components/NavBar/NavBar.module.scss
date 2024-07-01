@@ -1,0 +1,85 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: color(background);
+  z-index: 10;
+}
+.group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.wrap {
+  @extend .group;
+  justify-content: space-between;
+  padding: 8px 16px;
+
+  @include respond-to(md) {
+    // 768px
+    padding: 26px 30px;
+  }
+
+  .desktopOnly {
+    display: none;
+
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+
+  .mobileMenuBtn {
+    border: none;
+    padding: 4px;
+    background-color: inherit;
+
+    cursor: pointer;
+
+    div,
+    img {
+      width: 20px;
+
+      @include respond-to(xs) {
+        width: 24px;
+      }
+    }
+
+    @include respond-to(sm) {
+      padding: 8px;
+    }
+
+    @include respond-to(md) {
+      display: none;
+    }
+  }
+
+  .rightGroup {
+    @extend .group;
+    width: unset;
+    gap: 12px;
+
+    @include respond-to(sm) {
+      gap: 18px;
+    }
+
+    @include respond-to(md) {
+      gap: 24px;
+    }
+
+    @include respond-to(lg) {
+      gap: 30px;
+    }
+  }
+
+  .user {
+    @extend .group;
+    width: unset;
+
+    @include respond-to(sm) {
+      gap: 10px;
+    }
+  }
+}

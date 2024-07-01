@@ -13,7 +13,7 @@ const FlexRow = React.forwardRef<HTMLElement, FlexRowPropsType>(
     {
       hasBoxShadow,
       children,
-      style,
+      classes: style,
       alignItems,
       justifyContent,
       width,
@@ -56,7 +56,7 @@ const FlexColumn = React.forwardRef<HTMLElement, FlexColumnPropsType>(
     {
       hasBoxShadow,
       children,
-      style,
+      classes: style,
       alignItems,
       justifyContent,
       width,
@@ -95,7 +95,7 @@ const GridRow = React.forwardRef<HTMLElement, GridRowPropsType>(
   (
     {
       hasBoxShadow,
-      style,
+      classes: style,
       width,
       gap,
       alignItems,

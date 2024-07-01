@@ -1,15 +1,20 @@
-import { CSSProperties } from "react";
-import { BaseChildrenPropsType, CleanedBaseDivPropsType } from "../../toolkit/react";
+import { CSSProperties } from 'react';
+import {
+  BaseChildrenPropsType,
+  CleanedBaseDivPropsType,
+} from '../../toolkit/react';
 
 type LayoutPropsType = {
   readonly alignItems?: CSSProperties['alignItems'];
   readonly gap?: CSSProperties['gap'];
   readonly width?: CSSProperties['width'];
-  readonly style?: string;
+  readonly classes?: string;
   readonly hasBoxShadow?: boolean;
 };
 
-type CombinedLayoutPropsType = LayoutPropsType & BaseChildrenPropsType & CleanedBaseDivPropsType;
+type CombinedLayoutPropsType = LayoutPropsType &
+  BaseChildrenPropsType &
+  CleanedBaseDivPropsType;
 
 export type FlexRowPropsType = CombinedLayoutPropsType & {
   readonly justifyContent?: CSSProperties['justifyContent'];
@@ -26,4 +31,5 @@ export type GridRowPropsType = CombinedLayoutPropsType & {
   readonly justifyItems?: CSSProperties['justifyItems'];
 };
 
-export type ContainerPropsType = BaseChildrenPropsType & CleanedBaseDivPropsType & { readonly hasBoxShadow?: boolean; }
+export type ContainerPropsType = BaseChildrenPropsType &
+  CleanedBaseDivPropsType & { readonly hasBoxShadow?: boolean };

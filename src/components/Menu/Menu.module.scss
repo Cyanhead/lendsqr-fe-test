@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.positionRelative {
+  display: flex;
+  position: relative;
+}
+
+.wrap {
+  display: flex;
+  // z-index: 10;
+}
+
+.cleanButton {
+  background-color: color(background);
+  color: color(text);
+  border: none;
+  cursor: pointer;
+}
+
+.menuButton {
+  @extend .cleanButton;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+
+  @include respond-to(sm) {
+    gap: 10px;
+  }
+}
+
+.menuList {
+  position: absolute;
+  z-index: 5;
+  width: max-content;
+  border-radius: 4px;
+  background-color: white;
+  padding: 0;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.top {
+  right: 0;
+  bottom: 100%;
+}
+
+.bottom {
+  right: 0;
+  top: 100%;
+}
+
+.left {
+  top: 0;
+  right: 80%;
+}
+
+.right {
+  top: 0;
+  left: 100%;
+}
+
+// .left {
+//   right: 0;
+// }
+
+// .right {
+//   left: 0;
+// }
+
+.menuOption {
+  list-style: none;
+  font-size: 1rem;
+
+  @include respond-to(md) {
+    // 768px
+    font-size: calc(14 / 16 * 1rem);
+  }
+}
+
+.menuTextOnly {
+  padding: 9.5px 50px 9.5px 20px;
+}
+
+.menuButtonContent {
+  @extend .cleanButton;
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 9.5px 50px 9.5px 20px;
+  font-size: calc(14 / 16 * 1rem);
+
+  &:hover {
+    background-color: #efefef;
+  }
+}

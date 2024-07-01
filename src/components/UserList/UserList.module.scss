@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  @include respond-to(xs) {
+    // 480px
+  }
+
+  @include respond-to(sm) {
+    // 576px
+  }
+
+  @include respond-to(md) {
+    // 768px
+  }
+
+  @include respond-to(lg) {
+    // 992px
+  }
+
+  @include respond-to(xl) {
+    // 1200px
+  }
+}
+
+.tableNavWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  // border: 1px solid black; // DELETE ME
+
+  div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    // border: 1px solid black; // DELETE ME
+  }
+
+  @include respond-to(xs) {
+    // 480px
+
+    div:nth-child(2) {
+      justify-content: flex-start;
+    }
+  }
+
+  @include respond-to(sm) {
+    // 576px
+  }
+
+  @include respond-to(md) {
+    // 768px
+    flex-direction: row;
+    div {
+      flex: 1;
+    }
+
+    div:nth-child(2) {
+      justify-content: flex-end;
+    }
+  }
+
+  @include respond-to(lg) {
+    // 992px
+  }
+
+  @include respond-to(xl) {
+    // 1200px
+  }
+}
+
+.clean {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #213f7d1a;
+  color: color(primary);
+}
+
+.select {
+  @extend .clean;
+  margin: 0 10px;
+}
+
+.stepButtons {
+  @extend .clean;
+}
+
+.pageButtons {
+  @extend .clean;
+  background-color: #fbfbfb;
+}
+
+.menuCell {
+  position: relative;
+  top: 0;
+}

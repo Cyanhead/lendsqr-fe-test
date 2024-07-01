@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  display: none;
+  flex: 1 1 400px;
+  max-width: 400px;
+  width: 100%;
+
+  @include respond-to(md) {
+    // 768px
+    display: flex;
+  }
+
+  .input {
+    color: color(text);
+    border-radius: 8px 0 0 8px;
+    border: 1px solid border-color(hard);
+    border-right: 0;
+    width: 100%;
+    font-size: calc(14 / 16 * 1rem);
+    padding: 0 0 0 20px;
+
+    &::placeholder {
+      opacity: 70%;
+    }
+  }
+
+  .searchButton {
+    border-radius: 0 8px 8px 0;
+    border: none;
+    padding: 12px 21px;
+    background-color: color(secondary);
+    cursor: pointer;
+  }
+}
