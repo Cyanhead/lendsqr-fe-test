@@ -5,3 +5,11 @@
 .wrap {
   flex-direction: row;
 }
+
+main {
+  width: 100%;
+  @include respond-to(md) {
+    // 768px
+    width: calc(100vw - 302px);
+  }
+}

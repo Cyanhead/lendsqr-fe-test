@@ -26,9 +26,9 @@ function App() {
       <NavBar toggleSideBar={toggleSideBar} menuButtonRef={menuButtonRef} />
       <Layout.FlexRow classes={styles.wrap}>
         <SideBar showSideBar={showSideBar} sideBarRef={sideBarRef} />
-        <Layout.FlexColumn>
+        <main className={styles.main}>
           <Outlet />
-        </Layout.FlexColumn>
+        </main>
       </Layout.FlexRow>
     </>
   );

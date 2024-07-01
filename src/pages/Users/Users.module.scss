@@ -1,0 +1,79 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+@import '../../styles/mixins';
+
+.wrap {
+  @include respond-to(xs) {
+    // 480px
+  }
+
+  @include respond-to(sm) {
+    // 576px
+  }
+
+  @include respond-to(md) {
+    // 768px
+  }
+
+  @include respond-to(lg) {
+    // 992px
+  }
+
+  @include respond-to(xl) {
+    // 1200px
+  }
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  @include respond-to(xs) {
+    // 480px
+    // grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @include respond-to(sm) {
+    // 576px
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include respond-to(md) {
+    // 768px
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @include respond-to(lg) {
+    // 992px
+    gap: 26px;
+  }
+
+  @include respond-to(xl) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .card {
+    background-color: color(background);
+    border-radius: 1px;
+    border: 1px solid border-color(hard);
+    padding: 16px 20px 20px 20px;
+
+    @include respond-to(lg) {
+      // 992px
+      padding: 20px 30px 30px 30px;
+    }
+
+    p.label {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: calc(14 / 16 * 1rem);
+    }
+
+    p.count {
+      font-weight: 600;
+      font-size: calc(24 / 16 * 1rem);
+    }
+  }
+}

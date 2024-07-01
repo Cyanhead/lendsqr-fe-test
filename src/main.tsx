@@ -4,7 +4,7 @@ import App from './App.tsx';
 import './styles/global.scss';
 import '@fontsource-variable/work-sans';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Login } from './pages/index.ts';
+import { Login, Users } from './pages/index.ts';
 import { AuthProvider } from './auth/AuthContext.tsx';
 import { ProtectedRoute } from './components/index.ts';
 
@@ -24,7 +24,15 @@ const router = createBrowserRouter([
           {
             // default path
             index: true,
-            element: <div>Default page</div>,
+            element: <div>Dashboard page</div>,
+          },
+          {
+            path: '/users',
+            element: <Users />,
+          },
+          {
+            path: '/users/:id',
+            element: <div>User Details</div>,
           },
           {
             path: '*',

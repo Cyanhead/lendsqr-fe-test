@@ -19,8 +19,8 @@ const PageTemplate = ({
         )}
         <h2 className={styles.title}>{pageTitle}</h2>
       </Layout.FlexColumn>
-      <Layout.FlexRow>{topComponent}</Layout.FlexRow>
-      <Layout.FlexRow>{bottomComponent}</Layout.FlexRow>
+      {topComponent}
+      {bottomComponent}
     </Layout.FlexColumn>
   );
 };
